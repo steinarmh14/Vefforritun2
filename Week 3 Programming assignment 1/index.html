@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>JS-Draw</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="base.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="point.js"></script>
+	<script type="text/javascript" src="shape.js"></script>
+	<script type="text/javascript" src="shapes/square.js"></script>	
+	<script type="text/javascript" src="shapes/circle.js"></script>
+	<script type="text/javascript" src="shapes/line.js"></script>	
+	<script type="text/javascript" src="shapes/text.js"></script>	
+	<script type="text/javascript" src="shapes/pen.js"></script>
+
+</head>
+<body>	
+	<div class="headerTitle">
+		<h1>Our whiteboard</h1>
+	</div>
+
+	<div class="wrapper">
+		<div class="lhs">
+			<div class=tools>
+			<input type="radio" name="tool" id="penbutton" value="pen" checked="checked"></input><label for="penbutton">Pen</label>
+			</div>
+			<div class=tools>
+			<input type="radio" name="tool" id="squarebutton" value="square"></input><label for="squarebutton">Rectangle</label>
+			</div>
+			<div class=tools>
+			<input type="radio" name="tool" id="circlebutton" value="circle"></input><label for="circlebutton">Circle</label>
+			</div>
+			<div class=tools>
+			<input type="radio" name="tool" id="linebutton" value="line"></input><label for="linebutton">Line</label>
+			</div>
+			<div class=tools>
+			<input type="radio" name="tool" id="textbutton" value="text"></input><label for="textbutton">Text</label>
+			<input type="text" name="tool" id="textinput" value="" placeholder="Enter text"></input><label for="textinput"></label>
+			</div>
+			<div class=tools>
+			<label for="width">Line width</label>
+			<select name="tool" id="width">
+ 				<option value="1">small</option>
+  				<option value="2" selected>default</option>
+  				<option value="4">medium</option>
+  				<option value="8">large</option>
+  				<option value="16">extra large</option>
+			</select>
+			</div>
+			<div class=tools>
+			<label for="fontsize">Font size</label>
+			<select name="tool" id="fontsize">
+ 				<option value="10px">10</option>
+  				<option value="16px" selected>16</option>
+  				<option value="22px">22</option>
+  				<option value="28px">28</option>
+  				<option value="34px">34</option>
+  				<option value="40px">40</option>
+  				<option value="46px">46</option>
+			</select>
+			</div>
+			<div class=tools>
+			<label for="fontstyle">Font style</label>
+			<select name="tool" id="fontstyle">
+ 				<option value="arial" selected>Arial</option>
+  				<option value="verdana">Verdana</option>
+  				<option value="courier new">Courier New</option>
+  				<option value="cucida console">Cucida Console</option>
+  				<option value="times new roman">Times New Roman</option>
+  				<option value="georgia">Georgia</option>
+			</select>
+			</div>
+			<div class=tools>
+			<label for="color">Color</label>
+			<input type="color" name="color" id="color" value="#ff0000"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="undobutton" id="undobutton" value="undo"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="redobutton" id="redobutton" value="redo"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="savebutton" id="savebutton" value="save"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="prevbutton" id="prevbutton" value="load prev"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="nextbutton" id="nextbutton" value="load next"></input>
+			</div>
+			<div class=tools>
+			<input type="button" name="clearbutton" id="clearbutton" value="clear"></input>
+			</div>
+		</div>
+		<div class="rhs">
+			<canvas id="canvas" height="600" width="600"></canvas>
+		</div>
+	</div>
+
+	<footer>
+		<div class="info">
+			<span>Quang Nguyen</span>
+			<span>Einar Ragnarsson</span>
+			<span>Steinar Marino Hilmarsson</span>
+		</div>
+	</footer>
+</body>
+</html>
